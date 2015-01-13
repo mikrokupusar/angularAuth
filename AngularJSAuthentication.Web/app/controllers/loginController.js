@@ -10,7 +10,7 @@ app.controller('loginController', ['$scope', '$location', 'authService', functio
 
     $scope.login = function () {
         authService.login($scope.loginData).then(function () {
-            $location.path('/orders');
+            $location.path('/main');
         }, function (err) {
             $scope.message = err.error_description;
         });

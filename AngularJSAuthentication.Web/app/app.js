@@ -1,4 +1,4 @@
-﻿var app = angular.module('AngularAuthApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar']);
+﻿var app = angular.module('AngularAuthApp', ['ngRoute', 'ngLocale', 'LocalStorageModule', 'angular-loading-bar']);
 
 app.config(function ($routeProvider) {
 
@@ -17,10 +17,10 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/signup.html"
     });
 
-    //$routeProvider.when("/orders", {
-    //    controller: "ordersController",
-    //    templateUrl: "/app/views/orders.html"
-    //});
+    $routeProvider.when("/main", {
+        controller: "mainController",
+        templateUrl: "/app/views/main.html"
+    });
 
     $routeProvider.otherwise({ redirectTo: "/home" });
 
